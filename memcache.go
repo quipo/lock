@@ -12,7 +12,7 @@ type Memcache struct {
 }
 
 // Acquire a lock for the given key. Returns true on success, false on failure.
-// Can attempt up to maxTries times, waiting for waitTime between attempts
+// Can attempt up to maxTries times, waiting for waitTime seconds between attempts
 func (m Memcache) Acquire(key string, expiryTime int32, waitTime time.Duration, maxTries int) bool {
 	item := &memcache.Item{Key: m.getLockKey(key), Value: []byte{'d'}, Expiration: expiryTime}
 	for tries := 0; tries < maxTries; tries++ {
