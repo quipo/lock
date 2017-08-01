@@ -1,6 +1,7 @@
 Memcache-based lock utility in Golang
 =====================================
 
+[![Build Status](https://travis-ci.org/quipo/lock.png?branch=master)](https://travis-ci.org/quipo/lock) 
 [![GoDoc](https://godoc.org/github.com/quipo/lock?status.png)](http://godoc.org/github.com/quipo/lock)
 
 ## Introduction
